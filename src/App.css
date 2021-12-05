@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+::-webkit-scrollbar {
+	background-color: #000;
+	width: 12px;
+}
+::-webkit-scrollbar-track {
+	background-color: #000;
+}
+::-webkit-scrollbar-thumb {
+	background-color: purple;
+	border-radius: 15px;
+}
+::-webkit-scrollbar-button {
+	display: none;
+}
+@font-face {
+	font-family: cascadia;
+	src: url(./CascadiaCode.ttf) format("truetype");
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	color: purple;
+	font-family: cascadia;
+	font-weight: 900;
+	font-size: large;
+}
+.black-bg {
+	height: 100vh;
+	background-color: black;
+	padding: 2%;
+}
+.purple-line {
+	padding: 2%;
+	height: 100%;
+	border: 4px solid purple;
+	border-radius: 15px;
+}
+main {
+	display: flex;
+	flex: auto;
+}
+.my-info {
+	height: 80vh;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 40%;
+	border-right: 4px solid purple;
+}
+.my-projects {
+	height: 80vh;
+	padding: 1%;
+	flex: 60%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.profile-img {
+	width: 270px;
+	height: 270px;
+	object-fit: cover;
+	border-radius: 500px;
+	margin-bottom: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.article-grid {
+	max-height: 75vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	overflow-y: scroll;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.article-grid > article {
+	border-radius: 5px;
+	max-height: 40vh;
+	flex-basis: 450px;
+	margin: 0.5%;
+	padding: 6rem 1rem;
+	text-align: center;
+	background: purple;
+	color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-width: 750px) {
+	::-webkit-scrollbar {
+		display: none;
+	}
+	.black-bg {
+		height: 100%;
+		background-color: black;
+		padding: 2%;
+	}
+	main {
+		display: block;
+	}
+	.my-info {
+		border: none;
+	}
+	.article-grid {
+		display: block;
+	}
 }
