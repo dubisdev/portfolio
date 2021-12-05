@@ -1,5 +1,7 @@
 import Icon from "./Icon";
-export default () => {
+import styles from "./info.module.css";
+
+const MyInfo = () => {
 	const links = [
 		{
 			description: "GH Profile",
@@ -19,19 +21,22 @@ export default () => {
 	];
 	return (
 		<section aria-label="my-info" className="my-info">
-			<img src="/profile.jpg" className="profile-img" />
+			<img src="/profile.jpg" className="profile-img" alt="Profile" />
 			<h1 style={{ "font-size": "xx-large" }}>dubisdev</h1>
-			<p style={{ "text-align": "center", "margin-top": "10px" }}>
+			<p className={styles.description}>
 				Soy David Jiménez, estudiante universitario y amante de las tecnologías.
 				Hago un poco de todo, el único requisito es que sea útil para el resto
 				de personas o para mí :)
 			</p>
-			<br />
-			{links.map((l) => {
-				return <Icon {...l} />;
-			})}
+			<div className={styles.icons_wrapper}>
+				{links.map((l, index) => {
+					return <Icon key={index} {...l} />;
+				})}
+			</div>
 
-			<button>Descargar CV</button>
+			<button className={styles.cv_button}>Descargar CV</button>
 		</section>
 	);
 };
+
+export default MyInfo;

@@ -1,6 +1,6 @@
-export default () => (
+const ProjectSection = () => (
 	<section aria-label="my-projects" className="my-projects">
-		<h2 style={{ "font-size": "x-large", "text-align": "center" }}>
+		<h2 style={{ "font-size": "xx-large", "text-align": "center" }}>
 			Mis Proyectos y Contribuciones
 		</h2>
 		<br />
@@ -11,3 +11,5 @@ export default () => (
 		</div>
 	</section>
 );
+
+export default ProjectSection;

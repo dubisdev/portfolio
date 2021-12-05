@@ -58,7 +58,7 @@ main {
 	width: 270px;
 	height: 270px;
 	object-fit: cover;
-	border-radius: 500px;
+	border-radius: 1000000px;
 	margin-bottom: 15px;
 }
 
@@ -96,7 +96,9 @@ main {
 		display: block;
 	}
 	.my-info {
+		margin-bottom: 60px;
 		border: none;
+		border-bottom: 4px solid purple;
 	}
 	.article-grid {
 		display: block;

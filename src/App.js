@@ -1,6 +1,4 @@
 import "./App.css";
-import Icon from "./components/Icon";
-
 import MyInfo from "./components/Info";
 import MyProjects from "./components/Projects";
 function App() {
