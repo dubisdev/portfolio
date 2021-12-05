@@ -22,7 +22,7 @@ const MyInfo = () => {
 	return (
 		<section aria-label="my-info" className="my-info">
 			<img src="/profile.jpg" className="profile-img" alt="Profile" />
-			<h1 style={{ "font-size": "xx-large" }}>dubisdev</h1>
+			<h1 style={{ "font-size": "xx-large", color: "white" }}>dubisdev</h1>
 			<p className={styles.description}>
 				Soy David Jiménez, estudiante universitario y amante de las tecnologías.
 				Hago un poco de todo, el único requisito es que sea útil para el resto
