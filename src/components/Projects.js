@@ -9,6 +9,18 @@ const projects = [
 		tech: ["Typescript", "ESBuild"],
 	},
 	{
+		name: "Todoist Rest Client",
+		imgSrc: "profile.jpg",
+		url: "google.es",
+		tech: ["Typescript", "ESBuild"],
+	},
+	{
+		name: "Todoist Rest Client",
+		imgSrc: "profile.jpg",
+		url: "google.es",
+		tech: ["Typescript", "ESBuild"],
+	},
+	{
 		name: "Linkin",
 		imgSrc: "profile.jpg",
 		url: "google.es",

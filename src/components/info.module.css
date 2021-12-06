@@ -6,12 +6,12 @@
 
 .icons_wrapper {
 	display: flex;
-	width: 80%;
+	/* width: 80%; */
 	align-items: center;
 	justify-items: center;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 
 .cv_button {
