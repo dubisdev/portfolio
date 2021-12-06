@@ -62,27 +62,6 @@ main {
 	margin-bottom: 15px;
 }
 
-.article-grid {
-	max-height: 75vh;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: stretch;
-	overflow-y: scroll;
-}
-
-.article-grid > article {
-	border-radius: 5px;
-	max-height: 40vh;
-	flex-basis: 450px;
-	margin: 0.5%;
-	padding: 6rem 1rem;
-	text-align: center;
-	background: #4c00cf;
-	color: #ffffff;
-}
-
 @media (max-width: 750px) {
 	::-webkit-scrollbar {
 		display: none;
