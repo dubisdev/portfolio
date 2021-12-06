@@ -18,7 +18,7 @@ const projects = [
 		name: "Cerebro-Todoist",
 		imgSrc: "profile.jpg",
 		url: "google.es",
-		tech: [],
+		tech: ["Typescript", "ElectronJS", "React"],
 	},
 ];
 
