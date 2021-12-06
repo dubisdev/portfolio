@@ -15,7 +15,7 @@ const MyInfo = () => {
 		},
 		{
 			description: "Contact me",
-			link: "email:dubisdev@gmail.com",
+			link: "mailto:dubisdev@gmail.com",
 			imgSrc: "/icons/email.svg",
 		},
 	];
