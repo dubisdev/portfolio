@@ -18,7 +18,7 @@
 	cursor: pointer;
 	background: #4c00cf;
 	color: white;
-	border: 1px solid black;
+	border: 5px solid transparent;
 	border-radius: 10px;
 	padding: 10px;
 	width: 300px;
@@ -26,5 +26,5 @@
 
 .cv_button:hover {
 	opacity: 95%;
-	border: 1px solid white;
+	border: 5px solid white;
 }
