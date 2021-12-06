@@ -3,19 +3,21 @@ import styles from "./project.module.css";
 const Project = ({ name, url, imgSrc, tech }) => {
 	return (
 		<>
-			<a href={url} className={`${styles.project} a_background`}>
+			<a
+				href={url}
+				className={`${styles.project} a_background`}
+				style={{ backgroundImage: `url("${imgSrc}")` }}>
 				<div className={styles.project_hover}>
-					<span style={{ "font-size": "x-large" }}>{name}</span>
+					<span style={{ fontSize: "x-large" }}>{name}</span>
 					<div className="tech">
 						{tech.map((t) => {
-							return <span>{t}</span>;
+							return <span key={t}>{t}</span>;
 						})}
 					</div>
 				</div>
 			</a>
-			<style jsx>{`
+			<style jsx="true">{`
 				.a_background {
-					background-image: url("${imgSrc}");
 					background-size: cover;
 					padding: 120px;
 				}

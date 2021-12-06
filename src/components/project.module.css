@@ -11,6 +11,7 @@
 }
 
 .project_hover {
+	backdrop-filter: brightness(75%);
 	flex-direction: column;
 	position: absolute;
 	top: 0;
