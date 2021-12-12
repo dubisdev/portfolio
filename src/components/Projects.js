@@ -1,5 +1,4 @@
 import Project from "./Project";
-import styles from "./projects.module.css";
 
 const projects = [
 	{
@@ -23,14 +22,14 @@ const projects = [
 ];
 
 const ProjectSection = () => (
-	<section aria-label="my-projects" className="my-projects">
-		<h2 style={{ fontSize: "xx-large", textAlign: "center" }}>
-			Mis Proyectos y Contribuciones
-		</h2>
+	<section
+		aria-label="my-projects"
+		className="max-h-fit sm:flex-[60%] sm:h-[92vh] p-2">
+		<h2 className="text-center text-3xl">Mis Proyectos y Contribuciones</h2>
 		<br />
-		<div className={styles.article_grid}>
-			{projects.map((p) => {
-				return <Project key={p.url} {...p} />;
+		<div className="max-h-[75vh] flex flex-wrap justify-around overflow-y-scroll items-stretch ">
+			{projects.map((p, index) => {
+				return <Project key={index} {...p} />;
 			})}
 		</div>
 	</section>
