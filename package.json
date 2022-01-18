@@ -15,7 +15,7 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"postbuild": "react-snap && react-snap-sitemap --base-url=https://dubis.dev --change-frequency=daily"
+		"postbuild": "react-snap && react-snap-sitemap --base-url=https://dubis.dev/ --change-frequency=daily"
 	},
 	"eslintConfig": {
 		"extends": [
