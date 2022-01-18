@@ -1,5 +1,7 @@
 const Icon = ({ link, imgSrc, description }) => (
 	<a
+		target="_blank"
+		rel="noopener noreferrer"
 		href={link}
 		className="px-4 py-2 rounded-[5px] hover:bg-[#38363f] flex flex-col items-center text-sm"
 	>
