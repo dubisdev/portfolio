@@ -24,7 +24,7 @@ const MyInfo = () => {
 			className="border-[#4c00cf] border-b-4 p-[20px] flex flex-col items-center mb-[60px] sm:flex-[40%] sm:min-h-[80vh] sm:border-b-0  sm:border-r-4 sm:mb-[20px]"
 		>
 			<img
-				src="/profile.jpg"
+				src="/profile.png"
 				className="w-[270px] h-[270px] object-cover rounded-full mb-[15px]"
 				alt="Profile"
 			/>

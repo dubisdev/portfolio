@@ -1,11 +1,11 @@
 import "./index.css";
 import MyInfo from "./components/Info";
 import MyProjects from "./components/Projects";
-import { Route, Redirect } from "wouter";
+import { Route, Switch, Link } from "wouter";
 
 function App() {
 	return (
-		<>
+		<Switch>
 			<Route path="/">
 				<div className="bg-[#181818] min-h-screen p-4">
 					<div className="border-4 border-[#4c00cf] rounded-[15px] p-2 min-h-fit ">
@@ -16,8 +16,16 @@ function App() {
 					</div>
 				</div>
 			</Route>
-			<Redirect to="/" />
-		</>
+			<Route>
+				<div className="bg-[#181818] min-h-screen p-4 flex">
+					<main className="m-auto">
+						<p>404 Not found :(</p>
+						<Link to="/" className="text-[#385bc1] underline">Go to home page</Link>
+					</main>
+
+				</div>
+			</Route>
+		</Switch>
 	);
 }
 
