@@ -17,12 +17,9 @@ function App() {
 				</div>
 			</Route>
 			<Route>
-				<div className="bg-[#181818] min-h-screen p-4 flex">
-					<main className="m-auto">
-						<p>404 Not found :(</p>
-						<Link to="/" className="text-[#385bc1] underline">Go to home page</Link>
-					</main>
-
+				<div className="bg-[#181818] min-h-screen p-4 flex items-center justify-center flex-col">
+					<p>404 Not found :(</p>
+					<Link to="/" className="text-[#385bc1] underline">Go to home page</Link>
 				</div>
 			</Route>
 		</Switch>
