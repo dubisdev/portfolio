@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useMediaQuery } from "@react-hook/media-query";
+import styles from "./project.module.css";
 
 const Project = ({ name, url, imgSrc, tech }) => {
 	const [isHover, setIsHover] = useState(false);
@@ -7,66 +8,44 @@ const Project = ({ name, url, imgSrc, tech }) => {
 
 	if (isMobile)
 		return (
-			<>
-				<a
-					target="_blank"
-					rel="noopener noreferrer"
-					href={url}
-					className={`relative basis-[450px] rounded-[5px] h-52 m-[0.5%] bg-cover`}
-					style={{ backgroundImage: `url("${imgSrc}")` }}
-					onMouseOver={() => setIsHover(true)}
-					onMouseLeave={() => setIsHover(false)}
-				>
-					<div className="absolute flex flex-col top-0 right-0 bottom-0 left-0 items-center justify-center opacity-100 p-4 backdrop-brightness-50">
+			<a target="_blank" rel="noopener noreferrer" href={url} className={"relative w-full h-52 my-1"}>
+        <img src={imgSrc} alt={name} className={"basis-[450px] h-48 my-1 bg-cover w-full " + styles.imgBack}/>
+        <div className="absolute flex flex-col top-0 right-0 bottom-0 left-0 items-center justify-center p-4">
 						<span className="text-xl">{name}</span>
-
-						<div className="h-[40%] w-[100%] flex flex-wrap justify-around items-center p-1">
-							{tech.map((t, index) => {
-								return (
+						<div className="w-[100%] flex flex-wrap justify-around items-center p-1">
+							{tech.map((t, index) => 
 									<span
-										className="rounded-[5px] p-[5px] bg-black text-[#be99ff] m-[15px]"
+										className="rounded-lg p-1.5 bg-black text-[#be99ff] m-2"
 										key={index}
-									>
-										{t}
-									</span>
-								);
-							})}
-						</div>
+									>{t}</span>
+							)}
 					</div>
-				</a>
-			</>
+				</div>
+      </a> 
 		);
 
 	return (
-		<>
-			<a
-				target="_blank"
-				rel="noopener noreferrer"
-				href={url}
-				className={`relative basis-[450px] rounded-[5px] h-52 m-[0.5%] bg-cover`}
-				style={{ backgroundImage: `url("${imgSrc}")` }}
+			<a target="_blank" rel="noopener noreferrer" href={url}
+        className={"relative basis-[450px] rounded-[5px] h-52 my-2"}
 				onMouseOver={() => setIsHover(true)}
 				onMouseLeave={() => setIsHover(false)}
 			>
-				<div className="absolute flex flex-col top-0 right-0 bottom-0 left-0 items-center justify-center opacity-100 p-4 backdrop-brightness-[0.60] hover:backdrop-brightness-50">
+        <img src={imgSrc} alt={name} className={"w-full " + styles.imgBack}/>
+				<div className="absolute flex flex-col top-0 right-0 bottom-0 left-0 items-center justify-center opacity-100 p-4 hover:backdrop-brightness-75">
 					<span className="text-xl">{name}</span>
-					{isHover && (
-						<div className="h-[40%] w-[100%] flex flex-wrap justify-around items-center p-1">
-							{tech.map((t, index) => {
-								return (
-									<span
-										className="rounded-[5px] p-[5px] bg-black text-[#be99ff] m-[15px]"
-										key={index}
-									>
-										{t}
-									</span>
-								);
-							})}
-						</div>
-					)}
+					  {isHover && (
+						  <div className="flex flex-wrap justify-around items-center p-1">
+                {tech.map((t, index) => 
+                    <span
+                      className="rounded-lg p-1.5 bg-black text-[#be99ff] m-2"
+                      key={index}
+                    >{t}</span>
+                )}
+              </div>
+				  	)}
 				</div>
 			</a>
-		</>
+		
 	);
 };
 

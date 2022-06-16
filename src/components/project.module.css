@@ -1,0 +1,6 @@
+.imgBack {
+    height: inherit;
+    object-fit: cover;
+    filter: brightness(56%);
+    border-radius: 5px;
+}

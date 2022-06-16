@@ -8,6 +8,11 @@ const MyInfo = () => {
 			imgSrc: "/icons/gh.svg",
 		},
 		{
+			description: "LinkedIn",
+			link: "https://www.linkedin.com/in/davidjmz/",
+			imgSrc: "/icons/linkedin.svg",
+		},
+		{
 			description: "dev.to",
 			link: "https://dev.to/dubisdev",
 			imgSrc: "/icons/devto.svg",
